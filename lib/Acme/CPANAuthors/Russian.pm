@@ -3,10 +3,11 @@ package Acme::CPANAuthors::Russian;
 use warnings;
 use strict;
 
-our $VERSION = '0.0101';
+our $VERSION = '0.0102';
 
 use Acme::CPANAuthors::Register (
     ZOFFIX => 'Zoffix Znet',
+    SHARIFULN => 'Anatoly Sharifulin (Анатолий Шарифулин)',
 );
 
 
@@ -46,9 +47,14 @@ the C<Acme::CPANAuthors> module.
 If you are a Russian CPAN author not listed here, please send me your ID/name
 via email or RT so we can always keep this module up to date.
 
+=head1 CONTAINED AUTHORS
+
+    ZOFFIX      => 'Zoffix Znet',
+    SHARIFULN   => 'Anatoly Sharifulin (Анатолий Шарифулин)',
+
 =head1 AUTHOR
 
-'Zoffix, C<< <'zoffix at cpan.org'> >>
+Zoffix Znet, C<< <'zoffix at cpan.org'> >>
 (L<http://zoffix.com/>, L<http://haslayout.net/>, L<http://zofdesign.com/>)
 
 =head1 BUGS
