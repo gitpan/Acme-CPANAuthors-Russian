@@ -3,7 +3,7 @@ package Acme::CPANAuthors::Russian;
 use warnings;
 use strict;
 
-our $VERSION = '0.0103';
+our $VERSION = '0.0203';
 
 use Acme::CPANAuthors::Register (
     ABALAMA   => 'Lepenkov Sergey',
