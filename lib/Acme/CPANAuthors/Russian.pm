@@ -4,7 +4,7 @@ use utf8; # encoding="utf-8"
 use warnings;
 use strict;
 
-our $VERSION = '0.06';
+our $VERSION = '0.1';
 
 use Acme::CPANAuthors::Register (
 	ABALAMA   => 'Lepenkov Sergey',
@@ -300,12 +300,12 @@ Now B<124> Russian CPAN authors:
 
 L<Acme::CPANAuthors> L<http://search.cpan.org/search?query=Acme%3A%3ACPANAuthors&mode=all>
 
-=head1 AUTHORS
+=head1 AUTHOR
 
 Zoffix Znet, C<< <'zoffix at cpan.org'> >>
 (L<http://zoffix.com/>, L<http://haslayout.net/>, L<http://zofdesign.com/>)
 
-Anatoly Sharifulin, E<lt>sharifulin at gmail.comE<gt>
+Anatoly Sharifulin, C<< <sharifulin at gmail.com> >>
 
 =head1 BUGS
 
@@ -347,7 +347,8 @@ L<http://search.cpan.org/dist/Acme-CPANAuthors-Russian>
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright (C) 2008 by Zoffix Znet.
+Copyright (C) 2008-2009 by Zoffix Znet.
+
 Copyright (C) 2009 by Anatoly Sharifulin.
 
 This program is free software; you can redistribute it and/or modify it
