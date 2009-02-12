@@ -11,6 +11,7 @@ my $NAME = [
 	qr/Alex Noso/,
 	qr/Alex Prota/,
 	qr/Alexe[iy]/,
+	qr/Aleksey/,
 	qr/Anatoly/,
 	qr/Andre[iy]/,
 	qr/Andrew (?:Maltsev|Shitov|V\. Ma)/,
@@ -19,6 +20,7 @@ my $NAME = [
 	qr/Boris Sukholitko/,
 	qr/Denis \w+[oe]v\b/,
 	qr/Denis S/,
+	qr/(?:Evdokimov|Arapov) Denis/,
 	qr/Dmitr[iy]/,
 	qr/Egor/,
 	qr/Eugen Konkov/,
@@ -58,10 +60,10 @@ print
 		sort { $a->{'pause'} cmp $b->{'pause'} }
 		
 		# cpan author
-		grep { $_->{'author'} }
+		#~ grep { $_->{'author'} }
 		
-		#~ # not cpan author, have pause id
-		#~ grep {!$_->{'author'} }
+		# not cpan author, have pause id
+		grep {!$_->{'author'} }
 		
 		#~ # for list
 		#~ map  { join("\t", grep { defined } @$_{'id', 'name', 'pause', 'author', 'email', 'url'}), "\n" }
@@ -74,7 +76,7 @@ print
 			scalar grep { $name =~ /$_/ } @$NAME;
 		}
 		map  {
-			my($url,  $name ) = $_->[ 1] =~ /<a href="([^"]+)">([^<]+)/; $name  ||= $_->[ 1]; $name =~ s/\s+$//;
+			my($url,  $name ) = $_->[ 1] =~ /<a href="([^"]+)">([^<]+)/; $name  ||= $_->[ 1]; $name =~ s/\s+$//; $name =~ s/&[^;]+;//sg;
 			my($url2, $pause) = $_->[-1] =~ /<a href="([^"]+)">([^<]+)/; $pause ||= $_->[-1];
 			
 			+{
